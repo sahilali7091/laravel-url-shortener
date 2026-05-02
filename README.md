@@ -8,7 +8,6 @@
 - Allow users to log in and log out
 
 ## How it works
-
 - Superadmin is created using a database seeder.
 - Superadmin can create Admins for a company.
 - When an Admin is created, they receive an email with login credentials.
@@ -19,27 +18,24 @@
 - Duplicate short URLs are not allowed within the same company.
 
 ## Authentication
-used Laravel Breeze for authentication scaffolding.
-I implemented Laravel's authentication for login/logout and used role-based authorization for access control.
+Used Laravel Breeze for authentication scaffolding.
+Implemented Laravel's authentication for login/logout and role-based authorization.
 
-## sql
-I connected the application to a remote MySQL database using environment configuration and ensured secure access via proper credentials and IP whitelisting
+## Database
+Connected to remote MySQL database using environment configuration and secure credentials.
 
-## AI
-Used ChatGPT to understand Laravel Breeze authentication flow (login, logout, session handling).
+## AI Usage
+Used ChatGPT to understand Laravel Breeze authentication flow.
 
-## User Interface
-have focused more on the core functionality like login system, short URL generation, and role management (super admin, admin, and members), rather than UI, so I have used Laravel’s default login and dashboard templates.
-
+## UI Note
+Focused on backend functionality (login, roles, URL generation). Used Laravel default UI templates.
 
 ## Setup Instructions
-
 ```bash
 git clone <repo-url>
 cd project
 composer install
 cp .env.example .env
-env = i'll share the env file on email just copy and paste here
 php artisan key:generate
 php artisan migrate
 npm install
