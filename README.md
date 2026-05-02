@@ -1,3 +1,30 @@
+## Database Configuration
+
+The project is currently configured with a live server database connection.
+
+You can either:
+
+### Option 1: Use Existing Server Database (Recommended)
+No additional setup required. The project is already connected to the server database. Just update the `.env` file if needed.
+
+### Option 2: Use Local Database
+If you want to run the project locally:
+1. Create a new MySQL database on your local system
+2. Update `.env` file with your local database credentials
+3. Run migrations to create tables:
+
+   php artisan migrate
+
+(Optional) Seed initial data:
+   php aritsan db:seed --class=SuperAdminSeeder
+
+---
+
+Note:
+- All database structure is managed via Laravel migrations.
+- No manual SQL import is required.
+
+
 # Laravel URL Shortener
 
 ## Features
@@ -39,3 +66,34 @@ cp .env.example .env
 npm install
 npm run build
 php artisan serve
+
+
+
+## Project Setup
+
+1. Clone the repository
+   git clone <repo-url>
+
+2. Install PHP dependencies
+   composer install
+
+3. Install Node dependencies
+   npm install
+
+4. Setup environment file
+   cp .env.example .env
+
+5. Generate application key
+   php artisan key:generate
+
+6. Run migrations
+   php artisan migrate
+
+7. (Optional) Seed database
+   php aritsan db:seed --class=SuperAdminSeeder
+
+8. Start development server
+   php artisan serve
+
+9. Run frontend build
+   npm run dev
